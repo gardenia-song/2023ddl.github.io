@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no,width=device-width, minimum-scale=0.5, maximum-scale=1.0" />
+  <title>2023你的赶ddl年度报告</title>
+  <link rel="stylesheet" href="lib/style.css">
+</head>
+
+<body>
+  <audio id="music" class="musicControl" autoplay loop>
+    <source src="../bgm/bgm.mp3" type="audio/mp3">
+    <!-- 如果浏览器不支持 MP3，可以提供其他格式的音频文件 -->
+    <!-- <source src="../bgm/bgm.ogg" type="audio/ogg"> -->
+    <!-- <source src="../bgm/bgm.wav" type="audio/wav"> -->
+  </audio>  
+  <img id="musicImage" style="position: fixed;z-index: 999;height:40px;right: 30px;top: 30px;" src="img/music.png"
+    alt="" />
+  <!--loading-->
+  <div id="loading">
+    <div id="spinner"></div>
+  </div>
+  <!--loading-->
+
+  <div id="cover" class="report-cover">
+    <div class="cover-guide">
+
+      <div class="arrow-up"></div>
+      <span style='color:black'>滑动查看</span>
+    </div>
+  </div>
+
+  <div class="swiper-container" id='pages'>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide page" id="page1">
+
+        <div class="title">
+          <div class="page-num num-1"></div>
+          学业完成度<a class="toggle-tips" data-n='0'></a>增速不减<br />
+          获得“树莓采摘王”称号
+        </div>
+        <div class="area-grid">
+          <span>60</span>
+          <span>50</span>
+          <span>40</span>
+          <span>30</span>
+          <span>20</span>
+          <span>10</span>
+        </div>
+        <div class="scroll-container area-container">
+          <div class="swiper-wrapper">
+            <div id='area' class="chart-container area swiper-slide" onselect="return false" style='background:none'>
+            </div>
+          </div>
+        </div>
+        <p class='charttitle t1' style='margin-top:-10px;font-size: 14px;'>学业完成查询进度</p>
+        <p class='charttitle t2' style='margin-top:-10px;font-size: 14px;'>(2022-2023春季学期--2023-2024秋季学期，单位：百分比)</p>
+        <div class="footer">
+          <div class='pull-right'>
+            <div class="arrow-up"></div>
+            <span>滑动查看</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide page" id="page2">
+        <div class="title">
+          <div class="page-num num-2"></div>一年来，你的熬夜次数<br />
+          超过了全校90%的同学<br />
+          获得“超级夜猫子”称号
+        </div>
+        <div id="donut" class="chart-container donut" onselect="return false"></div>
+        <p class='charttitle t1' style='margin-top:-20px;font-size: 14px;'>睡眠情况占比（大概）</p>
+        <div class='qselect-dots'>
+          <img src="img/donuts.png" alt="" width="214">
+          <img src="img/p2-highlight.png" alt="" id="p2-highlight" width="17">
+        </div>
+        <ul class="qselect">
+          <li>1-3月</li>
+          <li>4-6月</li>
+          <li>7-9月</li>
+          <li>10-12月</li>
+        </ul>
+        <div class="footer">
+          <div class='pull-right'>
+            <div class="arrow-up"></div>
+            <span style="color:black">滑动查看</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide page" id="page3">
+        <div class="title">
+          <div class="page-num num-3"></div>
+          你使用次数最多的软件是Canva可画<a class="toggle-tips" data-n='1'></a><br />
+          <span style="font-size: 20px;line-height: 20px;">小红书、Bilibili、ChatGPT、Word、Copilot、<br />
+            VScode、Photoshop也是你常用的软件</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="toggle-tips" data-n='2'></a>获得了“恨没有三头六臂”称号<br />
+        </div>
+
+        <div class="timecount">
+          <div class="block">
+            <p>Canva可画人均<br />
+              日使用时长</p>
+            <div class="canva_158"></div>
+            <span class='text-min'>&nbsp;分钟</span>
+          </div>
+          <div class="block">
+            <p>小红书+Bilibili人均<br />
+              日使用时长</p>
+            <div class="red_143"></div>
+            <span class='text-min'>&nbsp;分钟</span>
+          </div>
+        </div>
+        <div class="pies-container">
+          <div id="pie-1" class="chart-container pie" onselect="return false"></div>
+          <div id="pie-2" class="chart-container pie" onselect="return false"></div>
+          <div id="pie-3" class="chart-container pie" onselect="return false"></div>
+          <div id="pie-4" class="chart-container pie" onselect="return false"></div>
+          <div class="chart-container pie" onselect="return false" style='background:none;font-size: 14px;'>
+            数媒网络er与其他CUCer的软件分类应用时长对比<br />
+            <div class="piesample piesample1" style='font-size: 14px;'></div><span>数媒网络er</span><br />
+            <div class="piesample piesample2" style='font-size: 14px;'></div><span>CUCer</span>
+          </div>
+        </div>
+        <div class="footer">
+          <div class='pull-right'>
+            <div class="arrow-up"></div>
+            <span>滑动查看</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide page" id="page4">
+        <div class="title">
+          <div class="page-num num-4"></div>你在赶ddl时最爱吃<br />
+          盖饭、咖啡、热带风味冰红茶……<br />
+          获得“一顿不吃饿得慌”称号<br />
+        </div>
+
+        <div class="column-grid">
+          <span>90%</span>
+          <span>60%</span>
+          <span>30%</span>
+          <span>0%</span>
+          <span>-30%</span>
+        </div>
+        <div class="scroll-container2 column-container">
+          <div class="swiper-wrapper">
+            <div id="column" class="chart-container column swiper-slide" onselect="return false"
+              style='background:none'></div>
+          </div>
+        </div>
+        <div style='text-align:center;height:30px;'>
+          <div class="piesample piesample1" style='font-size: 14px;'></div><span>普通赶ddl</span>
+          &nbsp;
+          <div class="piesample piesample2" style='font-size: 14px;'></div><span>紧急赶ddl</span>
+        </div>
+        <p class='charttitle t1' style='margin-top:-2px;font-size: 14px;'>赶ddl时食欲整体成增加趋势</p>
+        <div class="footer">
+          <div class='pull-right'>
+            <div class="arrow-up"></div>
+            <span>滑动查看</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide page" id="page5">
+        <div class="title">
+          <div class="page-num num-5"></div>本年度你赶过的十大ddl<br />
+          获得“赶ddl战士”称号<br />
+        </div>
+        <div id="bubble" class="chart-container bubble" onselect="return false"></div>
+        <div class="footer">
+          <div class='pull-right'>
+            <div class="arrow-up"></div>
+            <span>滑动查看</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swiper-slide back-cover" id="bcover">
+    <button id="lucky-sign-btn" onclick="extractLuckySign()">点击这里抽取新年幸运签</button>
+    <img id="lucky-sign-image" style="display: none;">
+  </div>
+
+  <script>
+    function extractLuckySign() {
+      // 本地五张图片的文件名
+      const imageNames = ["img/word1.png", "img/word2.png", "img/word3.png", "img/word4.png", "img/word5.png"];
+
+      // 随机选择一张图片
+      const randomIndex = Math.floor(Math.random() * imageNames.length);
+      const selectedImage = imageNames[randomIndex];
+
+      // 显示选定的图片
+      const imageElement = document.getElementById("lucky-sign-image");
+      imageElement.src = selectedImage;
+      imageElement.style.display = "block";
+    }
+  </script>
+
+
+  </div>
+  <!--弹窗-->
+  <script src="lib/script.js"></script>
+</body>
+
+</html>
